@@ -47,7 +47,8 @@ type StockThemesResponse struct {
 	Data []StockTheme `json:"data"`
 }
 
-const BASE_URL = "http://localhost:8081"
+//const BASE_URL = "http://localhost:8081"
+const BASE_URL = "http://140.245.67.237:8081"
 
 func init() {
 }
@@ -67,7 +68,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to get stock volume valued top: %v", err)
 	}
-	fmt.Println(string(resp.Body))
+	//fmt.Println(string(resp.Body))
 
 	//{"count":2462,"data":[{"code":"005930","ko_name":"삼성전자","en_name":"SamsungElec","industry":"반도체/반도체장비","close":213000.0,"returns":8.3969,"volume":81498731.0,"volume_returns":20.6853,"volume_valued":17111188967509.0,"volume_valued_returns":28.3288,"logo":"https://file.alphasquare.co.kr/media/images/stock_logo/kr/005930.png","stock_id":1014,"reference_close":196500.0,"reference_volume":67529951,"reference_volume_valued":13333867748200.0},
 	var data StockResponse
